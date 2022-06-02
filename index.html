@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js"></script>
+  </head>
+
+  <header class="header">
+    <nav class="nav">
+      <img src="" alt="" class="nav__logo" />
+      <p class="nav__call">Already a user?</p>
+      <a href="#" class="nav__sign">Sign in</a>
+    </nav>
+  </header>
+  <body>
+    <h1 class="title">Create an Issuu Account</h1>
+    <form
+      autocomplete="off"
+      action="https://reqres.in/api/users"
+      method="post"
+      class="form"
+    >
+      <div class="form__sign"></div>
+
+      <p>or with email</p>
+      <br />
+      <label for="email" class="form__label">Email</label><br />
+      <input
+        type="email"
+        id="email"
+        name="user_email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        placeholder="e.g. john.doe@email.com"
+        class="form__input"
+      /><br />
+
+      <label for="pass" class="form__label">Contraseña</label><br />
+      <input
+        type="password"
+        id="pass"
+        name="user_password"
+        pattern="[A-Za-z09] {6, 15}"
+        class="form__input"
+      /><br />
+      <div class="form_accept">
+        <input
+          type="checkbox"
+          id="terms"
+          name="terms_of_service"
+          class="form__checkbox"
+        />
+        <label for="terms" class="form__terms"
+          >I accept the <a href="#">Terms of Service</a> and the
+          <a href="#">Professional Terms of Service</a></label
+        >
+      </div>
+      <br />
+      <button disabled class="form__button">Creat Account</button>
+    </form>
+  </body>
+  <footer class="footer">
+    <p>Issuu Inc.</p>
+    <div class="footer_info"></div>
+    <p class="footer_info--terms">Terms</p>
+    <p class="footer_info--privacy">Privacy</p>
+    <p class="footer_info-dmca">Dmca</p>
+  </footer>
+</html>
